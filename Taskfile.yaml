@@ -1,0 +1,18 @@
+version: "3"
+
+tasks:
+  dev:
+    cmds:
+      - serverless dev
+    desc: Start the development environment
+
+  deploy:
+    cmds:
+      - serverless deploy
+    desc: Deploy the serverless application
+
+  setup:
+    desc: Install prerequesits and dependencies
+    cmds:
+      - npm install -g serverless
+      - cd service && npm install
