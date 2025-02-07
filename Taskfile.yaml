@@ -6,22 +6,22 @@ tasks:
   dev:
     desc: Start the development environment
     cmds:
-      - serverless dev
+      - serverless dev --region $AWS_REGION
 
   deploy:
     desc: Deploy the serverless application
     cmds:
-      - serverless deploy
+      - serverless deploy --region $AWS_REGION
 
   remove:
     desc: Remove the serverless application
     cmds:
-      - serverless remove
+      - serverless remove --region $AWS_REGION
 
   remove-all:
     desc: Remove the serverless application and shared infrastructure
     cmds:
-      - serverless remove --all
+      - serverless remove --all --region $AWS_REGION
 
   setup:
     desc: Install prerequesits and dependencies
