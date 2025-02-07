@@ -1,18 +1,35 @@
 version: "3"
 
+dotenv: [".env"]
+
 tasks:
   dev:
+    desc: Start the development environment
     cmds:
       - serverless dev
-    desc: Start the development environment
 
   deploy:
+    desc: Deploy the serverless application
     cmds:
       - serverless deploy
-    desc: Deploy the serverless application
+
+  remove:
+    desc: Remove the serverless application
+    cmds:
+      - serverless remove
+
+  remove-all:
+    desc: Remove the serverless application and shared infrastructure
+    cmds:
+      - serverless remove --all
 
   setup:
     desc: Install prerequesits and dependencies
     cmds:
       - npm install -g serverless
       - cd service && npm install
+
+  check-env:
+    desc: Check if AWS_REGION is set
+    cmds:
+      - echo "AWS_REGION is set to $AWS_REGION"
