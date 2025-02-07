@@ -7,6 +7,7 @@ A serverless application built using the Serverless Framework. This is for perso
 ```sh
 aws configure
 task setup
+cp .env.template .env # adjust to your likings
 ```
 
 ## Danksagungen und Credits
